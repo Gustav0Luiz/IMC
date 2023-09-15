@@ -25,14 +25,14 @@ export const Container = () => {
         <div className="flex max-w-xl lg:max-w-5xl m-auto gap-3 lg:gap-20 font-sans px-3 flex-col lg:flex-row">
             <div className="flex-1 ">
                 <h1 className="font-bold text-3xl lg:text-4xl mb-9 text-center lg:text-left text-cyan-700/90">Calcule o seu IMC.</h1>
-                <p className=" text-justify text-sm lg:text-lg mb-10 leading-6">IMC é a sigla para Índicie de Massa Corpórea, parametro adotado pela OMS para calcular o peso ideal de cada pessoa.</p>
-                <input className="placeholder:text-cyan-700/90 bg-white/70 text-black w-full rounded-md border-b-2 border-solid border-b-gray-800/30 px-4 py-2 mb-1 lg:mb-4 text-base outline-none" type="number" value={heightField > 0 ? heightField : ''} onChange={e => setHeightField(parseFloat(e.target.value))} placeholder="Digite a sua Altura. Ex (1.75)" disabled={showItem ? true : false}/>
-                <input className="placeholder:text-cyan-700/90 bg-white/70 text-black w-full rounded-md border-b-2 border-solid border-b-gray-800/30 px-4 py-2 lg:mb-4 text-base outline-none" type="number" value={weightField > 0 ? weightField : ''} onChange={e => setWeightField(parseFloat(e.target.value))} placeholder="Digite a seu Peso. Ex (70)" disabled={showItem ? true : false} />
-                <button className="w-full mt-5 lg:mt-9 px-4 py-2 rounded-lg text-white bg-cyan-700/90 text-lg hover:opacity-80 transition duration-500 ease-in-out disabled:hover:opacity-100 disabled:bg-gray-400" onClick={handleCalcBtn} disabled={showItem ? true : false}>Calcular</button>
+                <p className=" text-justify text-sm lg:text-lg mb-6 lg:mb-10 leading-6 text-black">IMC é a sigla para Índicie de Massa Corpórea, parametro adotado pela OMS para calcular o peso ideal de cada pessoa.</p>
+                <input className="placeholder:text-cyan-700/90 bg-white/70 text-cyan-700/90 w-full rounded-md border-b-2 border-solid border-b-gray-800/30 px-4 py-1 mb-1 lg:mb-4 text-base outline-none" type="number" value={heightField > 0 ? heightField : ''} onChange={e => setHeightField(parseFloat(e.target.value))} placeholder="Digite a sua Altura. Ex (1.75)" disabled={showItem ? true : false}/>
+                <input className="placeholder:text-cyan-700/90 bg-white/70 text-cyan-700/90 w-full rounded-md border-b-2 border-solid border-b-gray-800/30 px-4 py-1 lg:mb-4 text-base outline-none" type="number" value={weightField > 0 ? weightField : ''} onChange={e => setWeightField(parseFloat(e.target.value))} placeholder="Digite a seu Peso. Ex (70)" disabled={showItem ? true : false} />
+                <button className="w-full mt-5 lg:mt-9 px-4 py-1 rounded-lg text-white bg-cyan-700/90 text-lg hover:opacity-80 transition duration-500 ease-in-out disabled:hover:opacity-100 disabled:bg-gray-400" onClick={handleCalcBtn} disabled={showItem ? true : false}>Calcular</button>
             </div>
             {!showItem &&
                 <div className="flex-1 flex ">
-                    <div className="grid flex-1 grid-cols-2 gap-5">
+                    <div className="grid flex-1 grid-cols-2 gap-2 lg:gap-5">
                         {levels.map((item) =>( 
                             <div className="flex-1 flex font-medium  text-white rounded-xl gap-5 flex-col p-5 text-xl items-center justify-center max-h-40 lg:max-h-full" style={{backgroundColor:item.color}}>   
                                 <h1 className="text-center  text-xl lg:text-2xl">{item.title}</h1>   
