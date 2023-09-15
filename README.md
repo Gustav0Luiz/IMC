@@ -1,7 +1,7 @@
 <div align="center">
   <h1>Calculadora de IMC</h1>
   
-Uma <a href="https://imc-beige.vercel.app/">Calculadora de IMC</a> feita em React utilizando o Next, baseada no curso b7Web.
+Uma <a href="https://imc-olive.vercel.app/">Calculadora de IMC</a> feita em React utilizando o Next, baseada no curso b7Web.
 
 </div>
 
